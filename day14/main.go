@@ -75,8 +75,6 @@ func main() {
 		go deliveryStatus(deliveryState, i, deliveryList, &numbuy)
 	}
 
-	structTest(&stock)
-
 	for {
 		pro.PrintMenu()
 		fmt.Print("실행할 기능을 입력하시오 : ")
@@ -142,11 +140,6 @@ func main() {
 			fmt.Println("잘못된 입력입니다.")
 		}
 	}
-}
-
-func structTest(stock *productForm) {
-	m := *stock
-	fmt.Print(m["tumbler"])
 }
 
 func buying(stock *productInfo, customer *buyer, product string, numbuy *int, deliveryState chan bool) {
